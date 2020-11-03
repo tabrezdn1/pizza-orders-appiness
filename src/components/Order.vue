@@ -28,7 +28,7 @@
             href="#"
             v-for="(orderItem, orderItemIndex) in order.orderItems"
             :key="orderItemIndex"
-            >{{ orderItem.name }}</b-list-group-item
+            >{{ orderItem.name }} : {{ orderItem.cost }}</b-list-group-item
           >
           <!-- Display subtotal from order id @invoke: getSubtotal() -->
           <b-list-group-item>
