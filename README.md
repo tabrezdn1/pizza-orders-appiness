@@ -1,5 +1,13 @@
 # pizza-orders-appiness
 
+# screenshot
+https://snipboard.io/bBOyV9.jpg
+
+Color codes for order status:
+Yellow : Received
+Light Blue: Preparing
+Green: Ready to serve
+
 ## Project setup
 ```
 yarn install
