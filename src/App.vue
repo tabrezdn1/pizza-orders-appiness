@@ -1,20 +1,38 @@
 <template>
-  <div class="app">
-    <div class="d-flex justify-content-center"><h1>Pizza Orders</h1></div>
+  <div class="pizza-order-app">
+    <!-- Minimalistic Header -->
+    <div class="d-flex justify-content-center">
+      <h1>Pizza Orders</h1>
+    </div>
+
+    <!-- Render Order component -->
     <div class="d-flex flex-column bd-highlight mb-3">
-      <Order :orders="orders" />
+      <Orders :orders="orders" />
     </div>
   </div>
 </template>
 
 <script>
-import Order from "./components/Order.vue";
+// Import the Orders component
+import Orders from "./components/Order.vue";
 
 export default {
-  name: "App",
+  name: "PizzaOrderApp",
+
+  // Register as component
   components: {
-    Order,
+    Orders,
   },
+
+  // Data to be passed as prop to orders component
+  /**
+   * Object Prototype
+   * @keys id, customerName, orderItems, status.
+   * @id <Number> - Required in order to uniquely identify each order.
+   * @customerName <String> - Name of the customer.
+   * @orderItems <Array> - List of ordered items.
+   * @status <Number> - Represents the status of the order. [ -1 : Received, 0 : Preparing, 1 : Ready to serve].
+   */
   data() {
     return {
       orders: [
@@ -61,7 +79,8 @@ export default {
 </script>
 
 <style>
-.app{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+.pizza-order-app {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 </style>
