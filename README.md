@@ -4,10 +4,17 @@
 https://snipboard.io/bBOyV9.jpg
 
 Color codes for order status:
+```
 Yellow : Received
+```
+```
 Light Blue: Preparing
+```
+```
 Green: Ready to serve
-
+```
+#### Note: 
+Change Status button doesn't render when order is ready to serve.
 ## Project setup
 ```
 yarn install
